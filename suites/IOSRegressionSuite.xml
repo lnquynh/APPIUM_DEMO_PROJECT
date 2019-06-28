@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MT and ST regression Test" verbose="1" parallel="tests" thread-count="1" data-provider-thread-count="1">
+	
+	<test name="iOS Call Control Test on MT system">
+		<parameter name="waitTime" value="20"/>
+		<parameter name="deviceTestID1" value="MT_IOS1" />
+ 		<parameter name="deviceTestID2" value="MT_IOS2" />
+		<classes>
+			<class name= "ios.po.testcases.AudioCallTest"></class>
+		</classes>
+	</test>
+    
+	<test name="iOS Call Control Test on ST system">
+		<parameter name="waitTime" value="20"/>
+		<parameter name="deviceTestID1" value="ST_IOS1" />
+ 		<parameter name="deviceTestID2" value="ST_IOS2" />
+		<classes>
+			<class name= "ios.po.testcases.AudioCallTest"></class>
+		</classes>
+	</test>
+	
+	<test name="Login Test">
+	<parameter name="deviceTestID" value="MT_IOS1"/>
+		<classes>
+			<class name= "ios.po.testcases.LoginTest"></class>
+		</classes>
+	</test>
+</suite>
